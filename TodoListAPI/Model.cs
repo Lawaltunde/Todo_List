@@ -5,7 +5,7 @@ using TodListModel;
 
 public class BloggingContext : DbContext
 {
-    public DbSet<ToDoItem> ToDoItem{ get; set; }
+    public DbSet<TodoItem> TodoItems { get; set; }
     public DbSet<Blog> Blogs { get; set; }
     public DbSet<Post> Posts { get; set; }
 
@@ -27,7 +27,7 @@ public class BloggingContext : DbContext
 public class ToDoItem 
 {
     public static int Id { get; set; }
-    public static string TaskName { get; set; }
+    public static string TaskName { get; set; } = "";
     public static bool IsComplete { get; set; }
     public static DateTime dateTime {get; set; }
 }
