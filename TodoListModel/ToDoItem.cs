@@ -1,15 +1,10 @@
-﻿namespace TodoListModel;
-
-
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-
-public class ToDoItem : DbContext
+public class BloggingContext : DbContext
 {
-    public DbSet<Blog> TodoId { get; set; }
-    public DbSet<Post> TaskName { get; set; }
-    public bool IsCompleted { get; set; }
+    public DbSet<Blog> Blogs { get; set; }
+    public DbSet<Post> Posts { get; set; }
 
     public string DbPath { get; }
 
